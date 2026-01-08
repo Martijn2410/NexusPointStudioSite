@@ -1,11 +1,28 @@
+@font-face {
+    font-family: 'Anta';
+    src: url(../assets/fonts/Anta-Regular.ttf);
+}
+
 body {
     margin: 0;
     min-height: 100vh;
     display: flex;
-    justify-content: center; /* horizontal */
-    align-items: center;     /* vertical */
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/backgrounds/background.gif);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(6px);
 }
 
 .center-object {
     text-align: center;
+}
+
+.center-object h1, h2 {
+    font-family: "Anta";
+    color: white;
+    text-shadow: 0px 0px 5px black;
 }
