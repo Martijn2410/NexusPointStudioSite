@@ -3,7 +3,7 @@
     src: url(../assets/fonts/Anta-Regular.ttf);
 }
 
-body{
+body {
     margin: 0;
     display: flex;
     justify-content: center;
@@ -12,7 +12,9 @@ body{
     background-color: #191925;
 }
 
-#background{
+/*The following is hidden because it's a good reference point to have for future webpages with similar styling*/
+
+/* #background{
     background-image: url(../assets/backgrounds/background-loop.gif);
     height: 100vh;
     width: 100%;
@@ -23,13 +25,41 @@ body{
     transform: scale(1.05);
     top: 0;
     z-index: -1;
+} */
+
+#background-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    filter: blur(10px);
+    transform: scale(1.1);
+
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+#background-video.loaded {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #background-video {
+        filter: none;
+        transform: none;
+        transition: none;
+        opacity: 1;
+    }
 }
 
 .center-object {
     text-align: center;
 }
 
-.center-object h1, h2 {
+.center-object h1,
+h2 {
     font-family: "Anta";
     color: white;
     text-shadow: 0px 0px 5px black;

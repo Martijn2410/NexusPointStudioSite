@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Nexus Point Studios</title>
-    <link rel="stylesheet" href="css/index.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-    <div id="background"></div>
-    <main>
-        <div class="center-object">
-            <h1>Nexus Point Studios</h1>
-            <h2>Coming soon...</h2>
-        </div>
-    </main>
-    <!-- <script src="index.js"></script> -->
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Nexus Point Studios</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+  <!-- <div id="background"></div> -->
+  <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background.webm" type="video/webm">
+  </video>
+  <main>
+    <div class="center-object">
+      <h1>Nexus Point Studios</h1>
+      <h2>Coming soon...</h2>
+    </div>
+  </main>
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+        video.classList.add("loaded");
+    });
+</script>
+</body>
+
 </html>
