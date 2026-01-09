@@ -9,13 +9,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(../assets/backgrounds/background.gif);
-    background-color: #27275a;
+    background-image: url(../assets/backgrounds/background-loop.gif);
+    background-color: #191925;
     background-repeat:no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
-    backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
 }
 
 .center-object {
