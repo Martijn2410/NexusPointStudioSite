@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FNC & UEFN - Nexus Point Studios</title>
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link href='https://cdn.boxicons.com/3.0.7/fonts/basic/boxicons.min.css' rel='stylesheet'>
+  <link rel="icon" href="./assets/logos/nebula-logo.png" type="image/x-icon">
+</head>
+
+<body>
+  <div id="background"></div>
+  <!-- <video id="background-video" autoplay muted loop playsinline>
+    <source src="assets/backgrounds/background.webm" type="video/webm">
+  </video> -->
+
+  <header class="header">
+    <a href="index.html" class="logo"><img src="assets/logos/nexus-logo-test.png"><p class="logo-text">Nexus Point Studios</p></a>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="icons">
+      <i class='bx  bx-menu' id="menu-icon"></i>
+      <i class='bx  bx-x' id="close-icon"></i> 
+    </label>
+
+    <nav class="navbar">
+      <a href="index.html" style="--i:1;">Home</a>
+      <a href="" style="--i:2;">FNC & UEFN</a>
+      <a href="minecraftsmp.html" style="--i:3;">Minecraft SMP</a>
+      <a href="projects.html" style="--i:4;">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="">
+      <h1 class="center-object">FNC & UEFN Experiences</h1>
+      <h2 class="center-object">More info soon!</h2>
+    </div>
+  </main>
+  <script>
+    const video = document.getElementById("background-video");
+
+    video.addEventListener("canplay", () => {
+      video.classList.add("loaded");
+    });
+  </script>
+</body>
+
+</html>

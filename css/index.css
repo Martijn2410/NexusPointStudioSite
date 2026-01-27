@@ -3,6 +3,19 @@
     src: url(../assets/fonts/Anta-Regular.ttf);
 }
 
+:root {
+    --blur-amount: 15px;
+    --border-radius: 30px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Anta';
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
 body {
     margin: 0;
     display: flex;
@@ -14,18 +27,18 @@ body {
 
 /*The following is hidden because it's a good reference point to have for future webpages with similar styling*/
 
-/* #background{
-    background-image: url(../assets/backgrounds/background-loop.gif);
-    height: 100vh;
+#background {
+    background-image: url(../assets/backgrounds/background.webp);
+    height: 95vh;
     width: 100%;
     background-size: cover;
     background-position: center center;
     position: fixed;
     filter: blur(10px);
-    transform: scale(1.05);
+    transform: scale(1.15);
     top: 0;
     z-index: -1;
-} */
+}
 
 #background-video {
     position: fixed;
@@ -58,9 +71,88 @@ body {
     text-align: center;
 }
 
-.center-object h1,
+/* .center-object h1,
+h1,
 h2 {
-    font-family: "Anta";
     color: white;
     text-shadow: 0px 0px 5px black;
+} */
+
+h1 {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+h2{
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 0px 5px black; 
+}
+
+.img-logo {
+    width: 10%;
+    height: 10%;
+    padding-top: 10px;
+}
+
+.center-object d {
+    color: white;
+    text-shadow: 0px 0px 5px black;
+}
+
+.container {
+    width: fit-content;
+    padding: 8px 12px;
+    height: auto;
+    margin: 200px auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(var(--blur-amount));
+    -webkit-backdrop-filter: blur(var(--blur-amount));
+    border-radius: var(--border-radius);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.action__btns {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.action__btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.action__btns button:hover {
+    scale: 1.15;
+    background-color: #ffffff69;
+}
+
+.action__btns button:active {
+    scale: 0.95;
+}
+
+@media only screen and (max-width: 910px){
+    h1 {
+    font-size: 35px;
+}
+
+h2{
+    font-size: 20px;
+}
 }
