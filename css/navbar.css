@@ -29,11 +29,29 @@
 }
 
 .logo {
-    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* space if you use text + image */
+    height: 3.5rem;
+    /* controls logo size */
     color: #fff;
     text-decoration: none;
     font-weight: 700;
+    font-size: 2rem;
 }
+
+.logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.logo-text {
+    display: block;
+}
+
 
 .navbar a {
     font-size: 1.15rem;
@@ -55,6 +73,12 @@
     color: #fff;
     cursor: pointer;
     display: none;
+}
+
+@media only screen and (max-width: 1150px){
+    .logo-text {
+        display: none;
+    }
 }
 
 @media only screen and (max-width: 910px) {
@@ -119,4 +143,6 @@
         opacity: 1;
         transition-delay: calc(0.15s * var(--i));
     }
+
+    
 }
