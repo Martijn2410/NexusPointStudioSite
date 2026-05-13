@@ -52,6 +52,22 @@
       video.classList.add("loaded");
     });
   </script>
+  <script type="module">
+        const response = await fetch("/assets/rickroll3.gif");
+        const blob = await response.blob();
+
+        const reader = new FileReader();
+        reader.onloadend = () => {
+            const base64data = reader.result; // This is the full data:image/gif;base64,... string
+
+            console.log("%c ", `
+                background-image: url('${base64data}'); 
+                background-repeat: no-repeat; 
+                padding: 320px 500px;
+            `);
+        };
+        reader.readAsDataURL(blob);
+    </script>
 </body>
 
 </html>
